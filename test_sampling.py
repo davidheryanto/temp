@@ -1,6 +1,9 @@
 from hyperopt import hp, fmin, rand, tpe, space_eval
 from hyperopt.pyll.stochastic import sample
+<<<<<<< HEAD
 
+=======
+>>>>>>> 48aedb54cf3203cc60ab1e5867b333369bc8a585
 from pycallgraph import PyCallGraph
 from pycallgraph.output import GraphvizOutput
 
