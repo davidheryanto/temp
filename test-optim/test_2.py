@@ -1,4 +1,4 @@
-from hpsklearn import HyperoptEstimator, any_classifier
+from hpsklearn import HyperoptEstimator, any_classifier, svc
 from sklearn.datasets import fetch_mldata
 from hyperopt import tpe
 import numpy as np
@@ -20,8 +20,8 @@ if __name__ == '__main__':
     X_test = X[ indices[-test_size:]]
     y_test = y[ indices[-test_size:]]
 
-    estim = HyperoptEstimator( classifier=any_classifier('clf'),
-                                algo=tpe.suggest, trial_timeout=300)
+    estim = HyperoptEstimator( classifier=svc('my_svc'),
+                                algo=tpe.suggest, trial_timeout=300, max_evals=5)
 
     print('Running fit...')
     print('=' * 80)

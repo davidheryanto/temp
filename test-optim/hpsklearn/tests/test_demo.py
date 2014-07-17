@@ -5,11 +5,9 @@ def test_demo_iris():
     import hyperopt.tpe
     import hpsklearn
 
-    from sklearn.cross_validation import KFold
-
     data_view = skdata.iris.view.KfoldClassification(4)
 
-    estimator = hpsklearn.HyperoptEstimator(
+    estimator = hpsklearn.estimator(
         preprocessing=hpsklearn.components.any_preprocessing('pp'),
         classifier=hpsklearn.components.any_classifier('clf'),
         algo=hyperopt.tpe,
@@ -37,7 +35,3 @@ def test_demo_iris():
 
     test_predictions = estimator.predict(data_view.split[0].test.X)
     print np.mean(test_predictions == data_view.split[0].test.y)
-
-
-if __name__ == '__main__':
-    test_demo_iris()
