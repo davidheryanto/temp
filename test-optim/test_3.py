@@ -7,7 +7,7 @@ from hpsklearn import *
 from hyperopt import *
 
 
-def get_training_set():
+def get_training_set_classification():
     """
     Get random training set for classification
     :return: tuple of X_train, y_train, X_test, y_test
@@ -53,11 +53,12 @@ def run():
     """
     Run test
     """
-    X_train, y_train, X_test, y_test = get_training_set()
+    X_train, y_train, X_test, y_test = get_training_set_classification()
     estimator = hyperopt_estimator(
+        # TODO Figure out learning_rate='optimal' gives ValueError underflow exception
+        # TODO Figure out why epoch is always 1
         classifier=sgd(
             name='sgd_1',
-            # TODO learning_rate='optimal' gives ValueError underflow exception
             n_jobs=5,  # Change to -1 to use all cpus
             verbose=True,
             n_iter=50
