@@ -1,32 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>GTT Android App</title>
 
     <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-  </head>
-  <body>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+<body>
 <div class="jumbotron">
-  <h1>Android App</h1>
-<a class="btn btn-primary" href="./apk/pbm.apk">PBM v0.2.5</a>
-  <a class="btn btn-success" href="./apk/cvm.apk">CVM v0.2.5</a>
+    <h1>Android App</h1>
+
+    <hr/>
+    <h2>PBM<span class="info-update">Last updated 30-07-2014</span></h2>
+
+    <p class="underline">Changelog 0.2.6</p>
+    <ul>
+        <li>Add a check whether the device has Google Play service installed.</li>
+    </ul>
+    <a class="btn btn-primary download" href="./apk/pbm.apk">
+        Download<span class="glyphicon glyphicon-cloud-download"></span>
+    </a>
+
+    <hr/>
+    <h2>CVM<span class="info-update">Last updated 30-07-2014</span></h2>
+
+    <p class="underline">Changelog 0.2.6</p>
+    <ul>
+        <li>Add a check whether the device has Google Play service installed.</li>
+    </ul>
+    <a class="btn btn-success download" href="./apk/cvm.apk">
+        Download<span class="glyphicon glyphicon-cloud-download"></span>
+    </a>
 </div>
 
-   
+<style>
+    .underline {
+        text-decoration: underline;
+    }
 
- 
+    .jumbotron p {
+        font-size: 16px;
+    }
+
+    .jumbotron .info-update {
+        margin-left: 12px;
+        font-size: 16px;
+        color: #7D7D7D;
+        font-style: italic;
+    }
+
+    .btn {
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 0;
+    }
+
+    body {
+        background: #EEEEEE;
+    }
+
+    .download {
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .download span {
+        margin-left: 10px;
+    }
+
+    .jumbotron ul {
+        padding-left: 20px;
+    }
 
 
+</style>
 
-  </body>
+
+</body>
 </html>
