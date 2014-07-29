@@ -58,6 +58,7 @@ def run():
         # TODO Figure out learning_rate='optimal' gives ValueError underflow exception
         # TODO Figure out why epoch is always 1
         classifier=sgd(
+            loss='hinge',
             name='sgd_1',
             n_jobs=5,  # Change to -1 to use all cpus
             verbose=True,
