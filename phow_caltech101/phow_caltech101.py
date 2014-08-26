@@ -40,11 +40,11 @@ class Configuration(object):
             makedirs(self.dataDir)
             print "folder " + self.dataDir + " created"
         self.autoDownloadData = True
-        self.numTrain = 1
-        self.numTest = 1
+        self.numTrain = 15
+        self.numTest = 15
         self.imagesperclass = self.numTrain + self.numTest
         self.numClasses = 9
-        self.numWords = 300
+        self.numWords = 600
         self.numSpatialX = [2, 4]
         self.numSpatialY = [2, 4]
         self.quantizer = 'vq'  # kdtree from the .m version not implemented
@@ -56,8 +56,8 @@ class Configuration(object):
         self.randSeed = 1
         self.verbose = True
         self.extensions = [".jpg", ".bmp", ".png", ".pgm", ".tif", ".tiff"]
-        self.images_for_histogram = 2
-        self.numbers_of_features_for_histogram = 50  # 100000
+        self.images_for_histogram = 30
+        self.numbers_of_features_for_histogram = 100
         
         self.vocabPath = join(self.dataDir, identifier + '-vocab.py.mat')
         self.histPath = join(self.dataDir, identifier + '-hists.py.mat')
@@ -70,7 +70,7 @@ class Configuration(object):
             self.numClasses = 5
             self.images_for_histogram = 10
             self.numbers_of_features_for_histogram = 1000
-            self.numTrain = 1
+            self.numTrain
             self.numSpatialX = 2
             self.numWords = 100
             self.numTrain = 2
@@ -299,7 +299,7 @@ if __name__ == '__main__':
     ##################
     if VERBOSE: print str(datetime.now()) + ' start training vocab'
     if (not exists(conf.vocabPath)) | OVERWRITE:
-        vocab = trainVocab(selTrain, all_images, conf)
+        vocab = trainVocab(selTrain, all_images, conf)    
         savemat(conf.vocabPath, {'vocab': vocab})
     else:
         if VERBOSE: print 'using old vocab from ' + conf.vocabPath

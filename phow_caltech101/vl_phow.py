@@ -1,4 +1,5 @@
-from scipy import shape, dstack, sqrt, floor, array, mean, ones, vstack, hstack, ndarray
+import numpy as np
+from numpy import shape, dstack, sqrt, array, mean, ones, vstack, hstack, ndarray
 from vlfeat import vl_rgb2gray, vl_imsmooth, vl_dsift
 from sys import maxint
 
@@ -79,7 +80,7 @@ def vl_phow(im,
         # In pracrice, the offset must be integer ('bounds'), so the
         # alignment works properly only if all OPTS.SZES are even or odd.
 
-        off = floor(3.0 / 2 * (max(opts.sizes) - size_of_spatial_bins)) + 1
+        off = np.floor(3.0 / 2 * (max(opts.sizes) - size_of_spatial_bins)) + 1
 
         # smooth the image to the appropriate scale based on the size
         # of the SIFT bins
