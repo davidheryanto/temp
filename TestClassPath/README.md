@@ -23,11 +23,7 @@ In this example, HelloCat.java is in `com.cat` package, and is inside `com\cat` 
 ### Class in package and in different dir than current dir
 After you compile the code, if your .class cannot be reached from current directory, you have to set CLASSPATH variable.
 
-Suppose we're currently in 
-
-`C:\Users\Cat\TestClassPath`
-
-and we have `com.cat.HelloCatBox` located in the box folder
+Suppose we're currently in `C:\Users\Cat\TestClassPath` and we have `com.cat.HelloCatBox` located in the box folder
 
 `C:\Users\Cat\TestClassPath\box\com\cat\HelloCatBox.java`
 
