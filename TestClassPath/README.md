@@ -13,7 +13,7 @@ If your class is not in any package, like this Hello.java, then simply, compile 
 ```
 
 ### Class in package
-In this example, HelloCat.java is in com.cat package, and is inside `com\cat` directory. To run in, you must specificy the package name before the HelloCat class name:
+In this example, HelloCat.java is in `com.cat package`, and is inside `com\cat` directory. To run in, you must specificy the package name before the HelloCat class name:
 
 ```
 > javac com\cat\HelloCat.java
