@@ -27,11 +27,11 @@ Suppose we're currently in
 
 `C:\Users\Cat\TestClassPath`
 
-and we have HelloCatBox.java located in the box folder
+and we have `com.cat.HelloCatBox` located in the box folder
 
 `C:\Users\Cat\TestClassPath\box\com\cat\HelloCatBox.java`
 
-Then if we want to run `com.cat.HelloCat` from the TestClassPath directory. Compile it, box here is not a package name, just a directory where it contains com.cat.HelloCat:
+Then if we want to run `com.cat.HelloCatBox` from the TestClassPath directory. Compile it: (box here is not a package name, just a directory where it contains com.cat.HelloCat):
 
 ```
 > javac box\com\cat\HelloCatBox.java
